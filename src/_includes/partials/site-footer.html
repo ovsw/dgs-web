@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__grid [ flow ]">
+
+      <div class="footer__logos">
+        {# <img width="200" height="112" src="/images/logos/DG2GO-logo-transparent-white.png" alt="DelGrosso's Amusement Park and Laguna Splash Logo" /> #}
+        {# <img src="/images/logos/explore-altoona-logo-traced.png" alt="Explore Altoona Logo" /> #}
+        <h2>DelGrosso Foods Inc.</h2>
+      </div>
+
+      <ul class="footer__social-wrapper">
+        {% include 'partials/social-icons.html' %}
+      </ul>
+
+      <div class="footer__phone">
+        <a href="tel:814-684-3538"><span>Call us</span><br><span>814-684-3538</span></a>
+      </div>
+
+      <div class="footer__address [ flow ]">
+        
+        <p><a href="mailto:parkinfo@delgrossos.com">parkinfo@delgrossos.com</a></p>
+        <p>4352 E, Pleasant Valley Blvd <br />PO Box 308 Tipton, PA 16684</p>
+      </div>
+
+      <div class="footer__col col1">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="{{ nav[0].url }}">DG2GO Pizza Shop</a></li>
+          <li><a href="{{ nav[1].url }}">DG2GO Meals</a></li>
+          <li><a href="{{ nav[2].url }}">DG2GO On the Road</a></li>
+          <li><a href="{{ nav[3].url }}">DG2GO Specials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col col2">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/history/">History</a></li>
+          <li><a href="/join-our-team/">Join Our Team</a></li>
+          <li><a href="{{ nav[4].url }}">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col col3">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/ada-compliance/">ADA Compliance</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+    <div class="footer__bottom">
+      <div class="wrapper footer__bottom-content">
+          <p>©2014-2020 DelGrosso’s Amusement Park, Inc. All Rights Reserved. | 
+          Website by: <a href="https://studiorovst.com" target="_blank" rel="noopener noreferrer">Studio Rovst</a></p>
+      </div>
+    </div>
+</footer>

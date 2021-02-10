@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/page.css'] %}
+
+{% from 'components/page-header.html' import pageHeader %}
+{% from 'components/content-sections.html' import contentSections %}
+{% from 'components/grid-card.html' import gridCard %}
+
+{% from 'components/seo-data.html' import seoData %}
+
+{% block seo %}
+    {{seoData(
+      specialsMenu.content.seoTitle,
+      specialsMenu.content.seoDescription,
+      siteSettings.title,
+      siteSettings.description,
+      siteSettings.image,
+      specialsMenu.content.image
+      )}}
+{% endblock %}
+
+{# <script>console.log('debug', {{mealsMenu.content | dump | safe}})</script> #}
+
+{% block content %}
+
+
+{{pageHeader(title=title, image=specialsMenu.content.image)}}
+
+{{contentSections(specialsMenu.content.topSections)}}
+
+
+<div class=" [ wrapper auto-grid news-grid ]">
+
+  {% set tagValues = {
+    'food': '<span class="tag food">food</span>',
+    'music': '<span class="tag music">music</span>',
+    'free': '<span class="tag free">free entry</span>',
+    'hiring': '<span class="tag hiring">hiring</span>'
+  }%}
+
+  {% for special in specialsMenu.content.specials %}
+
+    {% set eventSubTitle %}
+      <strong>When:</strong> {{special.content.date | dateFilterYear}}, {{special.content.time}} <br />
+      <strong>Where:</strong> {{special.content.location}}
+    {% endset %}
+
+    
+    {{ gridCard(
+      titile=special.content.name,
+      image=special.content.image,
+      alt=special.content.image.alt,
+      
+      description = special.content.shortDescription,
+      titleHeadingLvl=3,
+      buttonText='See Details <span class="visually-hidden"> on the '+ special.content.name + '</span>',
+      buttonLink=special.content.slug.current
+    )}}
+  {% endfor %}
+  </div>
+
+  {{contentSections(specialsMenu.content.bottomSections)}}
+
+{% endblock %}

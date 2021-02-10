@@ -1,0 +1,52 @@
+$btn-colors-all: 'primary','secondary','accent','quaternary','dark','tertiary', 'light';
+
+.button, #c-submit-button {
+  @extend .radius;
+
+  display: inline-block;
+  padding: 1.125rem 1.5rem 0.9rem 1.5rem;
+  font-size: get-size('400');
+  
+  text-decoration: none;
+  text-align: center;
+
+  // border: 2px solid;
+  
+  @include apply-utility('font', 'sans');
+  // @include apply-utility('weight', 'bold');
+
+  &--colored-bg {
+    @each $color in $btn-colors-all {
+      &.button--color-#{$color} { 
+        background: get-color($color);
+        color: get-color('light-glare');
+      }
+    }
+  }
+
+  &--light-bg {
+    @each $color in $btn-colors-all {
+      &.button--color-#{$color} { 
+        background: get-color('light-glare');
+        color: get-color($color);
+      }
+    }
+  }
+
+  // Make sure hover state trumps all variants with a good ol’ important
+
+  // Add a ghost modifier
+  &[data-variant='ghost'], &--ghost {
+    background: transparent;
+    color: get-color('accent');
+  }
+
+  &--small {
+    font-size: get-size('350');
+    padding: 12px 16px!important;
+  }
+
+  &--full {
+    display: block;
+  }
+}

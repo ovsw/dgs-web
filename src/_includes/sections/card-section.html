@@ -1,0 +1,34 @@
+{% from 'components/grid-card.html' import gridCard%}
+
+{% set cardCount = section.cards | length %}
+  {% if (cardCount % 2 == 0) %}
+    {% set cardCountType = 'even' %}
+  {% else %}
+    {% set cardCountType = 'odd' %}
+  {% endif %}
+
+<section class="[ cardSection gap-bottom-900 ]">
+  <div class="[ wrapper flow ]">
+
+    <h2 class="mainHeaderHp gap-bottom-900"><span>Welcome</span> to the DelGrossso Family of Companies</h2>
+
+    <div class="[ auto-grid  ]">
+      {% for card in cards %}
+      
+       <script>console.log({{card | dump | safe}})</script> 
+          {{gridCard(
+          titile=card.company.name,
+          subtitle=card.company.tagline,
+          titleHeadingLvl=2,
+          image= card.company.image ,
+          description=card.company.shortDesc,
+          buttons=card.buttons
+          )
+          }}
+      {% endfor %}
+    </div>
+
+
+  </div>
+
+</section>

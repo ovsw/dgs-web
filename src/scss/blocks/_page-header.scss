@@ -1,0 +1,49 @@
+.page-header {
+  background-size: cover;
+  padding-top: 250px;
+
+  margin-bottom: var(--grid-space);
+
+  
+
+  @include media-query('md') {
+    padding-top: 22rem;
+  }
+
+  &__content {
+    display: inline-block;
+    background-color: get-color('light');
+    border-radius: 0 50px 0 0;
+    
+    padding: get-size('600') get-size('600');
+    padding-right: get-size('xl');
+    
+    @include media-query('md') {
+      padding: get-size('800') get-size('800');
+    }
+
+    @include media-query('lg') {
+    }
+    
+    h1 {
+      font-size: get-size('600');
+      display: inline-block;
+      
+      @include media-query('md') {
+        font-size: get-size('800');
+      }
+    }
+  }
+
+  
+  background-image: url('/images/bg/Favorite-Shot-of-the-Water-Park.jpg');
+
+}
+
+.narrow .wrapper {
+  @include media-query('lg') {
+    max-width: 1000px!important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

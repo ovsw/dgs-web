@@ -1,0 +1,108 @@
+{% set assetHash = global.random() %}
+{% set lang = global.getCurrentLanguage(page.url) %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    {% block seo %}
+      <title>{{ siteSettings.title }} | DelGrosso's DG2GO</title>
+      <meta name="description" content="{{siteSettings.description}}">
+    {% endblock %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#fffbfb">
+    <meta name="theme-color" content="#ffffff">
+
+    {# <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Overpass:400,700', 'Raleway:900']
+        }
+      });
+    </script> #}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Raleway:wght@700;900&display=swap" rel="stylesheet">
+
+
+    {# General critical styles #}
+    <style>{% include "css/critical.css" %}</style>
+
+    {# Add facility for pages to delare an array of critical styles #}
+    {% if pageCriticalStyles %}
+      {% for item in pageCriticalStyles %}
+        <style>{% include item %}</style>
+      {% endfor %}
+    {% endif %}
+
+    {# General stylesheets #}
+    {# <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" /> #}
+    {# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" onload="this.media='all'" /> #}
+
+    {# <link rel="preload" href="/fonts/Overpass-400-latin2.woff2" as="font" crossOrigin="anonymous"/>
+    <link rel="preload" href="/fonts/Overpass-400-latin4.woff2" as="font" crossOrigin="anonymous"/>
+    <link rel="preload" href="/fonts/Overpass-700-latin8.woff2" as="font" crossOrigin="anonymous"/>
+    <link rel="preload" href="/fonts/Raleway-800-latin13.woff2" as="font" crossOrigin="anonymous"/>
+    <link rel="preload" href="/fonts/Raleway-900-latin18.woff2" as="font" crossOrigin="anonymous"/> #}
+
+
+    {# Add facility for pages to declare an array of stylesheet paths #}
+    {% if pageStylesheets %}
+      {% for item in pageStylesheets %}
+        <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+      {% endfor %}
+    {% endif %}
+
+    {% if page.fileSlug == 'meals-menu' %}
+    <!-- FOXYCART -->
+    <script data-cfasync="false" src="https://cdn.foxycart.com/dg2go/loader.js" async defer></script>
+    <!-- /FOXYCART -->
+    {% endif %}
+
+  </head>
+
+  <body>
+    <div class="site-wrap">
+      
+      {% include "partials/site-head.html" %}
+
+      {# <script type="text/javascript">
+        console.log({{metadata | dump | safe}});
+      </script> #}
+      {# <h1>{{metadata.title}} </h1> #}
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    {% include "partials/site-footer.html" %}
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    {# <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" defer></script> #}
+
+    {# <script type="text/javascript">
+
+      window.onload = (event) => {
+        console.log('page is fully loaded');
+
+        var options = {
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+          autofocusVideos: true
+        }
+
+        const lightbox = GLightbox({ ...options });
+      };
+    </script> #}
+
+  </body>
+</html>

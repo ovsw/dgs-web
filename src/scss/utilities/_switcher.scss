@@ -1,0 +1,16 @@
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((1rem / 2) * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((60ch - (100% - 1rem)) * 999);
+  margin: calc(1rem / 2);
+}
+
+.switcher > * > :nth-last-child(n+5),
+.switcher > * > :nth-last-child(n+5) ~ * {
+  flex-basis: 100%;
+}
