@@ -36,7 +36,7 @@
     color: get-color('light-glare');
   }
 
-  background-color: get-color('primary-shade');
+  background-color: #054f52;
 
 
   &__logos {
@@ -162,11 +162,11 @@
   &__bottom {
     padding: get-size('500') 0;
     margin-top: get-size('600');
-    background-color: get-color('primary');
+    background-color: #01373a;
     font-size: get-size('330');
 
     p {
-      color: get-color('dark')!important;
+     
     }
 
     @include media-query('md') {

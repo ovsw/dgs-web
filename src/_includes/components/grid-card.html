@@ -58,9 +58,9 @@
       {% endif %} #}
 
       {% if (buttons) %}
-        <div class="card__buttonWrapper [ flow flow-space-300 ]">
+        <div class="gridCard__buttonWrapper">
             {% for button in buttons %}
-              <a href="{{button.url}}" class="[ button ] [ button--colored-bg button--color-accent button--small button--full ]">{{button.text}}</a>
+              <a href="{{button.url}}" class="[ button ] [ button--colored-bg button--color-accent button--small button--full ] [ gap-top-300 ]">{{button.text}} {% include "partials/svg/icon-chevron-right-solid.svg" %}</a>
             {% endfor %}
         </div>
       {% endif %}

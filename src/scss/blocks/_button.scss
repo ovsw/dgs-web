@@ -29,6 +29,7 @@ $btn-colors-all: 'primary','secondary','accent','quaternary','dark','tertiary', 
       &.button--color-#{$color} { 
         background: get-color('light-glare');
         color: get-color($color);
+        font-weight: 600;
       }
     }
   }
