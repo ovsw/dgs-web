@@ -2,7 +2,16 @@
 
   {% block content %}
   
-        <div class="ctaSection__leftColumn [ flow ]">
+    <section class="cluster-l cluster-space-800 text-dark">
+      <div>
+
+        {% if section.image %}
+          <div>
+            <img src="{% croppedUrlFor section.image, 400, 400 %}" alt="{{section.image.alt}}">
+          </div>
+        {% endif %}
+
+        <div class="[ flow ]">
           <h2>{{section.title | safe}}</h2>
 
           {% if section.subtitle %}
@@ -13,18 +22,22 @@
 
           {# RTE CONTENT #}
           {% if section.text %}
-            <div class="ctaSection__rteWrapper [ flow ]">
+            <div class="[ flow measure-long ]">
               {{section.text | blocksToMarkdown | markdownify | safe}} 
             </div>
           {% endif %}
+          
+          {% if section.button1.text %}
+          <div class="">      
+              <a href="{{section.button1.url}}" class="[ button ] [ button--colored-bg button--color-accent ]">{{section.button1.text}}</a>
+          </div>
+          {% endif %}
+
         </div>
 
-        {# BUTTONS #}
-        {% if section.button1.text %}
-        <div class="ctaSection__rightColumn">      
-            <a href="{{section.button1.url}}" class="[ button ] [ button--colored-bg button--color-accent ]">{{section.button1.text}}</a>
-        </div>
-        {% endif %}
+        
+      </div>
+    </section>
 
 
   {% endblock %}

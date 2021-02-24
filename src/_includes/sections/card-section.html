@@ -10,12 +10,10 @@
 <section class="[ cardSection gap-bottom-900 ]">
   <div class="[ wrapper flow ]">
 
-    <h2 class="mainHeaderHp gap-bottom-900 color-light"><span>Welcome</span> to the DelGrossso Family of Companies</h2>
-
     <div class="[ auto-grid  ]">
       {% for card in cards %}
       
-       <script>console.log({{card | dump | safe}})</script> 
+       {# <script>console.log({{card | dump | safe}})</script>  #}
           {{gridCard(
           titile=card.company.name,
           subtitle=card.company.tagline,

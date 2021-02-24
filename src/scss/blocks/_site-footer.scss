@@ -1,4 +1,5 @@
 .footer {
+  border-top: 2px solid get-color('light');
   padding-top: get-size('900');
   color: get-color('light-glare');
   font-size: get-size('400');
@@ -36,7 +37,7 @@
     color: get-color('light-glare');
   }
 
-  background-color: #054f52;
+  background-color: get-color('primary-shade');
 
 
   &__logos {
@@ -160,9 +161,10 @@
   }
 
   &__bottom {
+    border-top: 2px solid get-color('light');
     padding: get-size('500') 0;
     margin-top: get-size('600');
-    background-color: #01373a;
+    background-color: get-color('primary');
     font-size: get-size('330');
 
     p {

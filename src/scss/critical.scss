@@ -13,10 +13,11 @@
 }
 
 body {
-  background: url('/images/bg/DG_portal_texture.jpg') get-color('light') repeat top left;
+  // background: url('/images/bg/DG_portal_texture.jpg') get-color('light') repeat top left;
   color: get-color('dark');
   line-height: 1.5;
   font-size: get-size('500');
+  // background: linear-gradient(144deg, rgba(45,130,98,1) 0%, rgba(11,96,64,1) 100%);
   background-color: get-color('primary');
   // padding-top: 85px;
   
@@ -102,7 +103,7 @@ h1, h2 {
 
 // Import utilities
 @import 'utilities/auto-grid';
-@import 'utilities/cluster';
+@import 'utilities/cluster-l';
 @import 'utilities/eyebrow';
 @import 'utilities/flow';
 @import 'utilities/frame';
@@ -133,4 +134,26 @@ h1, h2 {
       font-size:  10rem;
     }
   }
+}
+
+.center {
+  text-align: center;
+}
+.videoOuterWrapper {
+  padding: get-size('800') 0;
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

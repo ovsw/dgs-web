@@ -20,10 +20,7 @@
         {% if image %}
           <img 
             onclick="window.location = '{{buttonLink}}'"
-            src="{% croppedUrlFor image, '500', '400' %}" 
-            srcset="{% croppedUrlFor image, '600', '400' %} 500w,
-            {% croppedUrlFor image, '900', '600' %}  960w"
-            sizes="(min-width: 40em) 50vw, 100vw"
+            src="{% imageUrlFor image, '650' %}" 
             alt="{{ alt }}"
           >
         {% endif %}

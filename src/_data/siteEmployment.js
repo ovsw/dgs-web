@@ -14,7 +14,16 @@ module.exports =  async function() {
           'image': content.image
         }
       },
-      sections[]{
+      sectionsTop[]{
+        ...,
+        _type == 'reusedSection' => {
+          ...,
+          reusableSection->{
+            ...
+          }
+        }
+      },
+      sectionsBottom[]{
         ...,
         _type == 'reusedSection' => {
           ...,

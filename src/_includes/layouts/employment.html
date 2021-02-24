@@ -6,35 +6,34 @@
 
 {% block content %}
 
+  {% for section in siteEmployment.content.sectionsTop %}
+
+    {% if section._type == 'ctaSection' %}
+      {% include "sections/cta-section.html" %}
+    {% endif %}
+    {% if section._type == 'rteSection' %}
+      {% include "sections/rte-section.html" %}
+    {% endif %}
+    {% if section._type == 'mainHeadingSection' %}
+      {% include "sections/mainHeading-section.html" %}
+    {% endif %}
+
+  {% endfor %}
   
   {% set cards = siteEmployment.content.companies %}
   {% include "sections/card-section-employment.html" %}
 
   {# <script>console.log({{siteHome | dump | safe}})</script> #}
 
+  {% for section in siteEmployment.content.sectionsBottom %}
 
-  {% for section in siteEmployment.content.sections %}
+    {% if section._type == 'ctaSection' %}
+      {% include "sections/cta-section.html" %}
+    {% endif %}
+    {% if section._type == 'rteSection' %}
+      {% include "sections/rte-section.html" %}
+    {% endif %}
 
-  {% if section._type == 'ctaSection' %}
-    {% include "sections/cta-section.html" %}
-  {% endif %}
-  {% if section._type == 'magSection' %}
-    {% include "sections/mag-section.html" %}
-  {% endif %}
-  {% if section._type == 'tableSection' %}
-    {% include "sections/table-section.html" %}
-  {% endif %}
-  {% if section._type == 'cardSection' %}
-    {% include "sections/card-section.html" %}
-  {% endif %}
-  {% if section._type == 'faqSection' %}
-    {% set qaSectionCounter = qaSectionCounter + 1 %}
-    {% include "sections/faq-section.html" %}
-  {% endif %}
-  {% if section._type == 'reusedSection' %}
-    {% include "sections/reusable-section.html" %}
-  {% endif %}
-
-{% endfor %}
+  {% endfor %}
 
 {% endblock %}

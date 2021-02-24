@@ -57,9 +57,9 @@ $gorko-colors: (
   'light': #F4F4F4,
   'light-shade': #FFFDF5,
   'light-glare': #FFF,
-  'primary': #5db0b4,
-  'primary-shade': #447F82,
-  'primary-glare': #5db0b4,
+  'primary': #2D8262,
+  'primary-shade': #006E44,
+  'primary-glare': #3EB084,
   'secondary': #057EA6,
   'secondary-shade': #006F94,
   'secondary-glare': #5BD8EB,
@@ -69,9 +69,9 @@ $gorko-colors: (
   'quaternary': #0A7F8F,
   'quaternary-shade': #096F7D,
   'quaternary-glare': #0EADC2,
-  'accent': #035cba,
-  'accent-shade': #035cba,
-  'accent-glare': #035cba,
+  'accent': #DB3232,
+  'accent-shade': #CC1616,
+  'accent-glare': #FF6E6E,
   'muted': #757575
 );
 
@@ -115,6 +115,11 @@ $gorko-config: (
     'items': $gorko-size-scale,
     'output': 'responsive',
     'property': 'margin-bottom',
+  ),
+  'cluster-space': (
+    'items': $gorko-size-scale,
+    'output': 'standard',
+    'property': '--cluster-space',
   ),
   'leading': (
     'items': (

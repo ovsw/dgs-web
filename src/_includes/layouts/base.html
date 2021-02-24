@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     {% block seo %}
-      <title>{{ siteSettings.title }} | DelGrosso's DG2GO</title>
+      <title>{{ siteSettings.title }} {{settings.seoTitleSuffix}}</title>
       <meta name="description" content="{{siteSettings.description}}">
     {% endblock %}
 
@@ -61,12 +61,6 @@
       {% endfor %}
     {% endif %}
 
-    {% if page.fileSlug == 'meals-menu' %}
-    <!-- FOXYCART -->
-    <script data-cfasync="false" src="https://cdn.foxycart.com/dg2go/loader.js" async defer></script>
-    <!-- /FOXYCART -->
-    {% endif %}
-
   </head>
 
   <body>
@@ -85,7 +79,7 @@
 
     {% include "partials/site-footer.html" %}
     
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+    {# <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script> #}
     {# <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" defer></script> #}
 
     {# <script type="text/javascript">

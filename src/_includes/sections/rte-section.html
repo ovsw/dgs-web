@@ -1,0 +1,8 @@
+<section class="section gap-bottom-2xl">
+  <div class="wrapper">
+    <div class="measure-long flow color-light" style="margin:0 auto;">
+      <h2>{{section.title}}</h2>
+      {{ section.text | blocksToMarkdown | markdownify | safe }}
+    </div>
+  </div>
+</section>
