@@ -1,0 +1,25 @@
+  
+  
+  {% if pageSeoTitle %}
+    {% set seoTitleComputed -%}
+      {{pageSeoTitle | safe}}{{settings.seoTitleSuffix}}
+    {%- endset %}
+  {%else%}
+    {% set seoTitleComputed = siteSettings.title  %}
+  {% endif %}
+
+  {% set seoDescriptionComputed = pageSeoDescription or siteSettings.description %}
+  {% set ogImageComputed = pageSeoImage or siteSettings.image %}
+  
+  
+
+  <title>{{seoTitleComputed | safe}}</title>
+  <meta name="description" content="{{seoDescriptionComputed | safe}}">
+  <link rel="canonical" href="{{page.url}}"/>
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="{{seoTitleComputed}}"/>
+  <meta property="og:description" content="{{seoDescriptionComputed}}" />
+  <meta property="og:url" content="{{page.url}}" />
+  <meta property="og:image" content="{% croppedUrlFor ogImageComputed, '1200', '627' %}" />
+  <meta property="og:type" content="website" />

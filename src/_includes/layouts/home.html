@@ -4,6 +4,13 @@
 
 {% from 'components/card.html' import card %}
 
+{# provide seo tags to base template #}
+{% block seo %}
+    {% set pageSeoTitle = siteHome.content.seoTitle %}
+    {% set pageSeoDescription = siteHome.content.seoDescription %}
+    {% include "partials/seo-data.html" %}
+{% endblock %}
+
 {% block content %}
 
   {% for section in siteHome.content.sectionsTop %}

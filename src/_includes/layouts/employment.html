@@ -4,6 +4,12 @@
 
 {% from 'components/card.html' import card %}
 
+{% block seo %}
+    {% set pageSeoTitle = siteEmployment.content.seoTitle %}
+    {% set pageSeoDescription = siteEmployment.content.seoDescription %}
+    {% include "partials/seo-data.html" %}
+{% endblock %}
+
 {% block content %}
 
   {% for section in siteEmployment.content.sectionsTop %}

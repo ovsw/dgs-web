@@ -3,16 +3,10 @@
 
 {% from 'components/content-sections.html' import contentSections %}
 
-{# provide seo tags to base template #}
 {% block seo %}
-      <title>{{sitePage.content.seoTitle}}{{settings.seoTitleSuffix}}</title>
-      <meta name="description" content="{{sitePage.content.seoTitle}}}">
-
-      <meta property="og:title" content="{{sitePage.content.seoTitle}}"/>
-      <meta property="og:url" content="{{page.url}}" />
-      <meta property="og:description" content="{{sitePage.content.seoDescription}}" />
-      {# <meta property="og:image" content="{% croppedUrlFor ogImage, '1200', '627' %}" /> #}
-      <meta property="og:type" content="website" />
+    {% set pageSeoTitle = sitePage.content.seoTitle %}
+    {% set pageSeoDescription = sitePage.content.seoDescription %}
+    {% include "partials/seo-data.html" %}
 {% endblock %}
 
 {% block content %}

@@ -4,6 +4,7 @@ const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const client = require('./src/utils/sanityClient.js')
 const serializers = require('./src/utils/serializers')
 const urlFor = require('./src/utils/imageUrl')
+const sitemap = require("@quasibit/eleventy-plugin-sitemap")
 
 // FILTERS
 const dateFilter = require('./src/filters/date-filter.js');
@@ -145,6 +146,12 @@ module.exports = config => {
   // Nunjucks Filter for converting sring to kebab-case
   config.addNunjucksFilter("makeId", function(value) {
      return value.replace(/\s+/g, '-').toLowerCase()
+  });
+
+  config.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://www.delgrossos.com",
+    },
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

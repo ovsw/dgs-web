@@ -1,3 +1,9 @@
 [build]
   command = "npm run production"
   publish = "dist"
+
+[[redirects]]
+  from = "https://dgs-web.netlify.app/*"
+  to = "https://www.delgrossos.com/:splat"
+  status = 301
+  force = true

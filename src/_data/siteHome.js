@@ -5,6 +5,8 @@ module.exports =  async function() {
   *[_id == "siteHome"]{
     ...,
     content {
+    	'seoTitle': coalesce(seo.title, title),
+			'seoDescription': coalesce(seo.description, ''),
       companies[]{
         buttons,
         company->{

@@ -8,9 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     {% block seo %}
-      <title>{{ siteSettings.title }} {{settings.seoTitleSuffix}}</title>
+      <title>{{ siteSettings.title }}</title>
       <meta name="description" content="{{siteSettings.description}}">
     {% endblock %}
+    <link rel="canonical" href="https://www.delgrossos.com{{page.url}}"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -61,11 +62,20 @@
       {% endfor %}
     {% endif %}
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1NQBVXXP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0T1NQBVXXP');
+    </script>
+
   </head>
 
   <body>
     <div class="site-wrap">
-      
       {% include "partials/site-head.html" %}
 
       {# <script type="text/javascript">
