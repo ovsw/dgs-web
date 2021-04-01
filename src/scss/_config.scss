@@ -14,34 +14,34 @@ $gorko-base-size: 1rem;
  * your whole project.
  */
 $gorko-type-scale: (
-  '200': $gorko-base-size * 0.56,
-  '300': $gorko-base-size * 0.75,
-  '330': $gorko-base-size * 0.8,
-  '350': $gorko-base-size * 0.9375,
-  '400': $gorko-base-size,
-  '500': $gorko-base-size * 1.33,
-  '600': $gorko-base-size * 1.77,
-  '700': $gorko-base-size * 2.36,
-  '800': $gorko-base-size * 3.15,
-  '900': $gorko-base-size * 4.2,
-  'xl': $gorko-base-size * 5.61
+  "200": $gorko-base-size * 0.56,
+  "300": $gorko-base-size * 0.75,
+  "330": $gorko-base-size * 0.8,
+  "350": $gorko-base-size * 0.9375,
+  "400": $gorko-base-size,
+  "500": $gorko-base-size * 1.33,
+  "600": $gorko-base-size * 1.77,
+  "700": $gorko-base-size * 2.36,
+  "800": $gorko-base-size * 3.15,
+  "900": $gorko-base-size * 4.2,
+  "xl": $gorko-base-size * 5.61,
 );
 
 $gorko-size-scale: (
-  '200': $gorko-base-size * 0.56,
-  '300': $gorko-base-size * 0.75,
-  '330': $gorko-base-size * 0.8,
-  '350': $gorko-base-size * 0.9375,
-  '400': $gorko-base-size,
-  '500': $gorko-base-size * 1.33,
-  '600': $gorko-base-size * 1.77,
-  '700': $gorko-base-size * 2.36,
-  '800': $gorko-base-size * 3.15,
-  '900': $gorko-base-size * 4.2,
-  'xl': $gorko-base-size * 5.61,
-  '2xl': $gorko-base-size * 7.478,
-  '3xl': $gorko-base-size * 9.969,
-  '4xl': $gorko-base-size * 13.288,
+  "200": $gorko-base-size * 0.56,
+  "300": $gorko-base-size * 0.75,
+  "330": $gorko-base-size * 0.8,
+  "350": $gorko-base-size * 0.9375,
+  "400": $gorko-base-size,
+  "500": $gorko-base-size * 1.33,
+  "600": $gorko-base-size * 1.77,
+  "700": $gorko-base-size * 2.36,
+  "800": $gorko-base-size * 3.15,
+  "900": $gorko-base-size * 4.2,
+  "xl": $gorko-base-size * 5.61,
+  "2xl": $gorko-base-size * 7.478,
+  "3xl": $gorko-base-size * 9.969,
+  "4xl": $gorko-base-size * 13.288,
 );
 
 /**
@@ -50,29 +50,29 @@ $gorko-size-scale: (
  * You can also use them to power borders, fills or shadows, for example.
  */
 $gorko-colors: (
-  'dark': #36342E,
-  'dark-shade': #343432,
-  'dark-glare': #42413b, 
+  "dark": #36342e,
+  "dark-shade": #343432,
+  "dark-glare": #42413b,
   // 'light': #FFFDF5,
-  'light': #F4F4F4,
-  'light-shade': #FFFDF5,
-  'light-glare': #FFF,
-  'primary': #2D8262,
-  'primary-shade': #006E44,
-  'primary-glare': #3EB084,
-  'secondary': #057EA6,
-  'secondary-shade': #006F94,
-  'secondary-glare': #5BD8EB,
-  'tertiary': #ffcc00,
-  'tertiary-shade': #ffd324,
-  'tertiary-glare': #fefc9f,
-  'quaternary': #0A7F8F,
-  'quaternary-shade': #096F7D,
-  'quaternary-glare': #0EADC2,
-  'accent': #DB3232,
-  'accent-shade': #CC1616,
-  'accent-glare': #FF6E6E,
-  'muted': #757575
+  "light": #f4f4f4,
+  "light-shade": #fffdf5,
+  "light-glare": #fff,
+  "primary": #2d8262,
+  "primary-shade": #006e44,
+  "primary-glare": #3eb084,
+  "secondary": #057ea6,
+  "secondary-shade": #006f94,
+  "secondary-glare": #5bd8eb,
+  "tertiary": #ffcc00,
+  "tertiary-shade": #ffd324,
+  "tertiary-glare": #fefc9f,
+  "quaternary": #0a7f8f,
+  "quaternary-shade": #086470,
+  "quaternary-glare": #0eadc2,
+  "accent": #db3232,
+  "accent-shade": #cc1616,
+  "accent-glare": #ff6e6e,
+  "muted": #757575,
 );
 
 /**
@@ -81,91 +81,89 @@ $gorko-colors: (
  * to enabling/disabling pre-built components/utilities.
  */
 $gorko-config: (
-  'bg': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'background',
+  "bg": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "background",
   ),
-  'color': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'color',
+  "color": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "color",
   ),
-
-  'flow-space': (
-    'items': $gorko-size-scale,
-    'output': 'responsive',
-    'property': '--flow-space',
+  "flow-space": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "--flow-space",
   ),
-  'font': (
-    'items': (
-      'base': '"Open Sans", sans-serif',
-      'sans': '"Open Sans", sans-serif',
-      'headline': '"Raleway", sans-serif',
+  "font": (
+    "items": (
+      "base": '"Open Sans", sans-serif',
+      "sans": '"Open Sans", sans-serif',
+      "headline": '"Raleway", sans-serif',
     ),
-    'output': 'standard',
-    'property': 'font-family',
+    "output": "standard",
+    "property": "font-family",
   ),
-  'gap-top': (
-    'items': $gorko-size-scale,
-    'output': 'responsive',
-    'property': 'margin-top',
+  "gap-top": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "margin-top",
   ),
-  'gap-bottom': (
-    'items': $gorko-size-scale,
-    'output': 'responsive',
-    'property': 'margin-bottom',
+  "gap-bottom": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "margin-bottom",
   ),
-  'cluster-space': (
-    'items': $gorko-size-scale,
-    'output': 'standard',
-    'property': '--cluster-space',
+  "cluster-space": (
+    "items": $gorko-size-scale,
+    "output": "standard",
+    "property": "--cluster-space",
   ),
-  'leading': (
-    'items': (
-      'loose': 1.7,
-      'tight': 1.3,
-      'flat': '1.1',
+  "leading": (
+    "items": (
+      "loose": 1.7,
+      "tight": 1.3,
+      "flat": "1.1",
     ),
-    'output': 'standard',
-    'property': 'line-height',
+    "output": "standard",
+    "property": "line-height",
   ),
-  'mx': (
-    'items': (
-      '0': '0',
-      'auto': '0 auto',
+  "mx": (
+    "items": (
+      "0": "0",
+      "auto": "0 auto",
     ),
-    'output': 'responsive',
-    'property': 'margin',
+    "output": "responsive",
+    "property": "margin",
   ),
-  'measure': (
-    'items': (
-      'micro': '10ch',
-      'small': '15ch',
-      'compact': '30ch',
-      'short': '40ch',
-      'long': '65ch',
+  "measure": (
+    "items": (
+      "micro": "10ch",
+      "small": "15ch",
+      "compact": "30ch",
+      "short": "40ch",
+      "long": "65ch",
     ),
-    'output': 'responsive',
-    'property': 'max-width',
+    "output": "responsive",
+    "property": "max-width",
   ),
-  'text': (
-    'items': $gorko-type-scale,
-    'output': 'responsive',
-    'property': 'font-size',
+  "text": (
+    "items": $gorko-type-scale,
+    "output": "responsive",
+    "property": "font-size",
   ),
-  'weight': (
-    'items': (
-      'normal': 400,
-      'bold': 900,
+  "weight": (
+    "items": (
+      "normal": 400,
+      "bold": 900,
     ),
-    'output': 'standard',
-    'property': 'font-weight',
+    "output": "standard",
+    "property": "font-weight",
   ),
-  'breakpoints': (
-    'sm': '(min-width: 21rem)',
-    'md': '(min-width: 37em)',
-    'lg': '(min-width: 62em)',
+  "breakpoints": (
+    "sm": "(min-width: 21rem)",
+    "md": "(min-width: 37em)",
+    "lg": "(min-width: 62em)",
   ),
 );
-
