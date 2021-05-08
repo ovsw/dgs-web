@@ -19,7 +19,7 @@
     <div class="gridCard__image">
         {% if image %}
           <img 
-            onclick="window.location = '{{buttonLink}}'"
+            {# onclick="window.location = '{{buttonLink}}'" #}
             src="{% imageUrlFor image, '650' %}" 
             alt="{{ alt }}"
           >
