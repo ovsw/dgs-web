@@ -13,6 +13,16 @@ module.exports = {
     youtube: (({node}) =>  {
       const youtubeId = getYouTubeID(node.url)
       return (`<div class="videoOuterWrapper"><div class="videoWrapper"><iframe width="560" height="349" src="https://www.youtube.com/embed/${youtubeId}"  frameborder="0" allowfullscreen></iframe></div></div>`)
-    })
+    }),
+  },
+  marks: {
+    button: ({mark, children}) => {
+      const {href = "#", blank = false} = mark
+      const target = blank ? 'target="_blank"' : ''
+
+      return (
+        `<a href=${href} class="[ button ] [ button--colored-bg button--color-accent ]" ${target}>${children}</a>`
+      )
+    }
   }
 }
