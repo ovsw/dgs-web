@@ -8,16 +8,25 @@
     {% set pageSeoTitle = siteEmployment.content.seoTitle %}
     {% set pageSeoDescription = siteEmployment.content.seoDescription %}
     {% include "partials/seo-data.html" %}
-    <!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-N5Q2KC8');</script>
   <!-- End Google Tag Manager -->
-  
- 
-  
+
+  <!-- pixel -->
+  <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    ttd_dom_ready( function() {
+        if (typeof TTDUniversalPixelApi === 'function') {
+            var universalPixelApi = new TTDUniversalPixelApi();
+            universalPixelApi.init("wylz9t3", ["jthjdgl"], "https://insight.adsrvr.org/track/up");
+        }
+    });
+  </script>
+  <!-- end pixel -->
 {% endblock %}
 
 {% block afterBodyOpen %}

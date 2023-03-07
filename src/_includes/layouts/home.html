@@ -9,6 +9,33 @@
     {% set pageSeoTitle = siteHome.content.seoTitle %}
     {% set pageSeoDescription = siteHome.content.seoDescription %}
     {% include "partials/seo-data.html" %}
+     <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N5Q2KC8');</script>
+      <!-- End Google Tag Manager -->
+      <meta name="google-site-verification" content="JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s" />
+
+      <!-- pixel -->
+      <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        ttd_dom_ready( function() {
+            if (typeof TTDUniversalPixelApi === 'function') {
+                var universalPixelApi = new TTDUniversalPixelApi();
+                universalPixelApi.init("wylz9t3", ["jthjdgl"], "https://insight.adsrvr.org/track/up");
+            }
+        });
+      </script>
+      <!-- end pixel -->
+{% endblock %}
+
+{% block afterBodyOpen %}
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5Q2KC8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 {% endblock %}
 
 {% block content %}
